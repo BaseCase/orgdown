@@ -10,6 +10,10 @@ endif
 
 pyfile python/orgdown.py
 
-function! orgdown#OrgDownSayHello()
+function! orgdown#SayHello()
   python say_hello()
+endfunction
+
+function! orgdown#JumpToNextHeading()
+  python jump_to_next_heading()
 endfunction

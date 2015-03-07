@@ -3,4 +3,5 @@ if exists("g:orgdown_loaded")
 endif
 let g:orgdown_loaded = 1
 
-command OrgDownHi call orgdown#OrgDownSayHello()
+command OrgDownHi call orgdown#SayHello()
+command OrgJumpToNextHeading call orgdown#JumpToNextHeading()
