@@ -1,1 +1,1 @@
-autocmd BufNewFile,BufRead *.md setf orgdown
+autocmd BufNewFile,BufRead *.md setlocal filetype=orgdown
