@@ -17,3 +17,7 @@ endfunction
 function! orgdown#JumpToNextHeading()
   python jump_to_next_heading()
 endfunction
+
+function! orgdown#JumpToPreviousHeading()
+  python jump_to_previous_heading()
+endfunction
