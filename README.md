@@ -20,3 +20,17 @@ and then source the file and run `:BundleInstall`.
 ### Without Vundle
 
 I dunno. Prolly have to flesh this section out later.
+
+
+## Commands
+
+### Navigation
+
+* `<C-j>` will jump down to the next heading
+* `<C-k>` will jump up to the previous heading
+
+### Visibility Cycling
+
+* `<Tab>` will cycle the visibility of the heading under the cursor, up to the
+  next sibling or parent level. (This is not complete yet; it's what I'm
+working on now)
