@@ -8,7 +8,9 @@ if !has('python')
   finish
 endif
 
-pyfile python/orgdown.py
+" construct path to python file we want to load, then run it
+let s:py_location = resolve(expand('<sfile>:p:h:h')) . '/python/orgdown.py'
+execute 'pyfile ' . s:py_location
 
 function! orgdown#SayHello()
   python say_hello()
