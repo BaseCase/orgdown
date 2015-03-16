@@ -42,3 +42,12 @@ working on now)
 - [ ] finish folding
 - [ ] global folding (fold all heading with shift+tab)
 - [ ] bump entire subtree in/out one level, flattening out at H1
+
+
+## Some sample keybindings for your .vimrc
+
+```vim
+map <C-j> :OrgdownJumpToNextHeading<cr>
+map <C-k> :OrgdownJumpToPreviousHeading<cr>
+map <Tab> :OrgdownCycleVisibilityLocal<cr>
+```
