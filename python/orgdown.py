@@ -18,12 +18,25 @@ def jump_to_previous_heading():
 def cycle_visibility_local():
     current_row = vim.current.window.cursor[0]
     if not _is_heading_row(current_row): return
-    next_header_row = _next_heading_row_of_equal_or_lesser_depth(current_row)
-    if next_header_row > -1:
-        vim.command("{0},{1}fold".format(current_row, next_header_row - 1))
+
+    # it's a closed fold; open it
+    if _is_closed_fold(current_row):
+        vim.command("foldopen")
+
+    # it's open; fold down to next heading
     else:
-        end = len(vim.current.buffer)
-        vim.command("{0},{1}fold".format(current_row, end))
+        next_header_row = _next_heading_row_of_equal_or_lesser_depth(current_row)
+        if next_header_row > -1:
+            vim.command("{0},{1}fold".format(current_row, next_header_row - 1))
+        else:
+            end = len(vim.current.buffer)
+            vim.command("{0},{1}fold".format(current_row, end))
+
+
+def _is_closed_fold(row_num):
+    print("checking row {}".format(row_num))
+    res = int(vim.eval("foldclosed({})".format(row_num)))
+    return res > -1
 
 
 def _next_heading_row_of_equal_or_lesser_depth(row_num):
