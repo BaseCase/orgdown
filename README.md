@@ -39,7 +39,7 @@ working on now)
 ## TODO
 
 (copied from the piece of scratch paper I had with me while at hack day)
-- [ ] finish folding
+- [X] finish folding
 - [ ] global folding (fold all heading with shift+tab)
 - [ ] bump entire subtree in/out one level, flattening out at H1
 
