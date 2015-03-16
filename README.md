@@ -47,7 +47,7 @@ working on now)
 ## Some sample keybindings for your .vimrc
 
 ```vim
-map <C-j> :OrgdownJumpToNextHeading<cr>
-map <C-k> :OrgdownJumpToPreviousHeading<cr>
-map <Tab> :OrgdownCycleVisibilityLocal<cr>
+autocmd FileType orgdown map <buffer> <C-j> :OrgdownJumpToNextHeading<cr>
+autocmd FileType orgdown map <buffer> <C-k> :OrgdownJumpToPreviousHeading<cr>
+autocmd FileType orgdown map <buffer> <Tab> :OrgdownCycleVisibilityLocal<cr>
 ```
